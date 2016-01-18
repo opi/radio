@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>laradio</title>
+  <style type="text/css">
+    body {
+      max-width: 60em;
+      margin: 0 auto;
+      padding: 2em;
+      background-color: #333;
+      color: #ddd;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+    h1,
+    h2,
+    h3 {
+      font-family: monospace;
+      font-weight: normal;
+      color: #999;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.6em;
+    }
+    h3 {
+      font-size: 1.4em;
+    }
+
+    audio {
+      background-color: #333;
+      height: 1.4em;
+    }
+
+    .radio {}
+    .radio::after {
+      content:"";
+      display: block;
+      border-top: 1px solid #999;
+      width: 2em;
+      height: 1px;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .stations {
+      padding-left: 1em;
+    }
+    .stations li {
+      margin-bottom: 1em;
+      list-style: square;
+    }
+    .stations li span,
+    .stations li audio {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .stations li span {
+      min-width: 8em;
+    }
+
+    @media screen and (min-width: 60em) {
+      .column {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    footer {
+      margin-top: 2em;
+      color: #999;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <section class="radio">
+    <h2>France Inter</h2>
+    <audio src="http://audio.scdn.arkena.com/11008/franceinter-midfi128.mp3" controls></audio>
+  </section>
+
+  <section class="radio">
+    <h2>France Info</h2>
+    <audio src="http://audio.scdn.arkena.com/11006/franceinfo-midfi128.mp3" controls></audio>
+  </section>
+
+  <section class="radio">
+    <h2>France Culture</h2>
+    <audio src="http://audio.scdn.arkena.com/11010/franceculture-midfi128.mp3" controls></audio>
+  </section>
+
+  <section class="radio">
+    <h2>FIP</h2>
+    <audio src="http://audio.scdn.arkena.com/11016/fip-midfi128.mp3" controls></audio>
+    <div class="columns">
+    <div class="column">
+      <h3>Par ville</h3>
+      <ul class="stations">
+        <li><span>Bordeaux</span><audio src="http://audio.scdn.arkena.com/11343/fipbordeaux-midfi128.mp3" controls></audio></li>
+        <li><span>Nantes</span><audio src="http://audio.scdn.arkena.com/11344/fipnantes-midfi128.mp3" controls></audio></li>
+        <li><span>Strasbourg</span><audio src="http://audio.scdn.arkena.com/11345/fipstrasbourg-midfi128.mp3" controls></audio></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Par style</h3>
+      <ul class="stations">
+        <li><span>Rock</span><audio src="http://webradiofip1.scdn.arkena.com/webradiofip1.mp3" controls></audio></li>
+        <li><span>Jazz</span><audio src="http://webradiofip2.scdn.arkena.com/webradiofip2.mp3" controls></audio></li>
+        <li><span>Groove</span><audio src="http://webradiofip3.scdn.arkena.com/webradiofip3.mp3" controls></audio></li>
+        <li><span>Monde</span><audio src="http://webradiofip4.scdn.arkena.com/webradiofip4.mp3" controls></audio></li>
+        <li><span>Nouveautés</span><audio src="http://webradiofip5.scdn.arkena.com/webradiofip5.mp3" controls></audio></li>
+        <li><span>Il y a 45 ans</span><audio src="http://webradiofip6.scdn.arkena.com/webradiofip6.mp3" controls></audio></li>
+      </ul>
+    </div>
+    </div>
+  </section>
+
+  <section class="radio">
+    <h2>Prun'</h2>
+    <audio src="http://streaming.prun.net/streamprun" controls></audio>
+  </section>
+
+  <footer>
+    écoutons la radio plus simplement.
+  </footer>
+</div>
+</body>
+</html>
