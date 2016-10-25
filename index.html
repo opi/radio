@@ -30,9 +30,22 @@
       font-size: 1.4em;
     }
 
+    a  {
+      color: #888;
+      text-decoration: none;
+    }
+    a:focus,
+    a:hover {color: #999;text-decoration: underline;}
+
     audio {
+      display: block;
       background-color: #333;
       height: 1.4em;
+    }
+
+    audio + a {
+      display: block;
+      font-size: smaller;
     }
 
     .radio {}
@@ -52,11 +65,6 @@
     .stations li {
       margin-bottom: 1em;
       list-style: square;
-    }
-    .stations li span,
-    .stations li audio {
-      display: inline-block;
-      vertical-align: bottom;
     }
     .stations li span {
       min-width: 8em;
@@ -84,38 +92,66 @@
   <section class="radio">
     <h2>France Inter</h2>
     <audio src="http://direct.franceinter.fr/live/franceinter-midfi.mp3" controls></audio>
+    <a href="http://direct.franceinter.fr/live/franceinter-midfi.mp3">direct.franceinter.fr/live/franceinter-midfi.mp3</a>
   </section>
 
   <section class="radio">
     <h2>France Info</h2>
     <audio src="http://direct.franceinfo.fr/live/franceinfo-midfi.mp3" controls></audio>
+    <a href="http://direct.franceinfo.fr/live/franceinfo-midfi.mp3">direct.franceinfo.fr/live/franceinfo-midfi.mp3</a>
   </section>
 
   <section class="radio">
     <h2>France Culture</h2>
     <audio src="http://direct.franceculture.fr/ts/franceculture-midfi.mp3" controls></audio>
+    <a href="http://direct.franceculture.fr/ts/franceculture-midfi.mp3">direct.franceculture.fr/ts/franceculture-midfi.mp3</a>
   </section>
 
   <section class="radio">
     <h2>FIP</h2>
     <audio src="http://direct.fipradio.fr/live/fip-midfi.mp3" controls></audio>
+    <a href="http://direct.fipradio.fr/live/fip-midfi.mp3">direct.fipradio.fr/live/fip-midfi.mp3</a>
     <div class="columns">
     <div class="column">
       <h3>Par ville</h3>
       <ul class="stations">
-        <li><span>Bordeaux</span><audio src="http://direct.fipradio.fr/live/fipbordeaux-midfi.mp3" controls></audio></li>
-        <li><span>Nantes</span><audio src="http://direct.fipradio.fr/live/fipnantes-midfi.mp3" controls></audio></li>
-        <li><span>Strasbourg</span><audio src="http://direct.fipradio.fr/live/fipstrasbourg-midfi.mp3" controls></audio></li>
+        <li>
+          <span>Bordeaux</span><audio src="http://direct.fipradio.fr/live/fipbordeaux-midfi.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fipbordeaux-midfi.mp3">direct.fipradio.fr/live/fipbordeaux-midfi.mp3</a>
+        </li>
+        <li>
+          <span>Nantes</span><audio src="http://direct.fipradio.fr/live/fipnantes-midfi.mp3" controls></audio>
+          <a hrez="http://direct.fipradio.fr/live/fipnantes-midfi.mp3">direct.fipradio.fr/live/fipnantes-midfi.mp3</a>
+        </li>
+        <li>
+          <span>Strasbourg</span><audio src="http://direct.fipradio.fr/live/fipstrasbourg-midfi.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fipstrasbourg-midfi.mp3">direct.fipradio.fr/live/fipstrasbourg-midfi.mp3</a>
+        </li>
       </ul>
     </div>
     <div class="column">
       <h3>Par style</h3>
       <ul class="stations">
-        <li><span>Rock</span><audio src="http://direct.fipradio.fr/live/fip-webradio1.mp3" controls></audio></li>
-        <li><span>Jazz</span><audio src="http://direct.fipradio.fr/live/fip-webradio2.mp3" controls></audio></li>
-        <li><span>Groove</span><audio src="http://direct.fipradio.fr/live/fip-webradio3.mp3" controls></audio></li>
-        <li><span>Monde</span><audio src="http://direct.fipradio.fr/live/fip-webradio4.mp3" controls></audio></li>
-        <li><span>Nouveautés</span><audio src="http://direct.fipradio.fr/live/fip-webradio5.mp3" controls></audio></li>
+        <li>
+          <span>Rock</span><audio src="http://direct.fipradio.fr/live/fip-webradio1.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fip-webradio1.mp3">direct.fipradio.fr/live/fip-webradio1.mp3</a>
+        </li>
+        <li>
+          <span>Jazz</span><audio src="http://direct.fipradio.fr/live/fip-webradio2.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fip-webradio2.mp3">direct.fipradio.fr/live/fip-webradio2.mp3</a>
+        </li>
+        <li>
+          <span>Groove</span><audio src="http://direct.fipradio.fr/live/fip-webradio3.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fip-webradio3.mp3">direct.fipradio.fr/live/fip-webradio3.mp3</a>
+        </li>
+        <li>
+          <span>Monde</span><audio src="http://direct.fipradio.fr/live/fip-webradio4.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fip-webradio4.mp3">direct.fipradio.fr/live/fip-webradio4.mp3</a>
+        </li>
+        <li>
+          <span>Nouveautés</span><audio src="http://direct.fipradio.fr/live/fip-webradio5.mp3" controls></audio>
+          <a href="http://direct.fipradio.fr/live/fip-webradio5.mp3">direct.fipradio.fr/live/fip-webradio5.mp3</a>
+        </li>
       </ul>
     </div>
     </div>
@@ -124,11 +160,13 @@
   <section class="radio">
     <h2>Prun'</h2>
     <audio src="http://streaming.prun.net/streamprun" controls></audio>
+    <a href="http://streaming.prun.net/streamprun">streaming.prun.net/streamprun</a>
   </section>
 
   <section class="radio">
     <h2>Klaxon</h2>
     <audio src="http://radioklaxon.antirep.net/RadioKlaxon" controls></audio>
+    <a href="http://radioklaxon.antirep.net/RadioKlaxon">radioklaxon.antirep.net/RadioKlaxon</a>
   </section>
 
   <footer>
